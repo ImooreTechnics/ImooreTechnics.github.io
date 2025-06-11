@@ -6,6 +6,13 @@
   <title>Isaiah Moore | Portfolio</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@jupyterlab/theme-light-extension/style/index.css" />
   <style>
+    :root {
+      --primary-color: #1a73e8;
+      --background-color: #f9f9fc;
+      --text-color: #333;
+      --header-color: #2c3e50;
+      --accent-color: #e8f0fe;
+    }
     body {
       font-family: Calibri, sans-serif;
       margin: 2rem;
@@ -17,6 +24,7 @@
       margin: auto;
     }
     h1, h2 {
+      color: var(--header-color);
       border-bottom: 2px solid #ddd;
       padding-bottom: 0.3rem;
     }
@@ -26,23 +34,53 @@
       overflow-x: auto;
     }
     a {
-      color: #0066cc;
+      color: var(--primary-color);
       text-decoration: none;
+      font-weight: 500;
     }
     a:hover {
       text-decoration: underline;
+    }
+    ul {
+      padding-left: 1.2em;
+    }
+    li {
+      margin-bottom: 1.2em;
+    }
+    strong {
+      color: #000;
+    }
+    .resume-link {
+      margin-top: 2rem;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Isaiah Moore</h1>
-    <p><strong>Email:</strong> <a href="mailto:imoore@udel.edu">imoore@udel.edu</a></p>
+    <p><strong>University Email:</strong> <a href="mailto:imoore@udel.edu">imoore@udel.edu</a></p>
     <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/imooretech/" target="_blank">imooretech</a></p>
     <p><strong>GitHub:</strong> <a href="https://github.com/ImooreTechnics/Website" target="_blank">ImooreTechnics</a></p>
 
     <h2>About Me</h2>
     <p>I’m a Clinical Data Science enthusiast pursuing a B.A. in Computer Science with minors in Mathematics and Data Science. My passion lies in applying ML and predictive modeling to healthcare challenges.</p>
+
+    <h2>Research Interests</h2>
+    <ul>
+      <li>Predictive modeling for long-term patient outcomes</li>
+      <li>Clinical Natural Language Processing (NER, BERT, entity linking)</li>
+      <li>Decision support systems for oncology and chronic illness management</li>
+      <li>Interpretable AI in healthcare diagnostics</li>
+      <li>Survival analysis and time-series health data</li>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+      <li><strong>Programming:</strong> Python (Pandas, NumPy, Dask), R (ggplot2, dplyr), Oracle SQL, HTML, CSS</li>
+      <li><strong>Machine Learning & AI:</strong> scikit-learn, TensorFlow, Keras, PyTorch, BERT, CRF, word2vec</li>
+      <li><strong>Data Visualization:</strong> Matplotlib, Seaborn, ggplot2</li>
+      <li><strong>Statistical Analysis:</strong> Predictive modeling, survival analysis, statistical inference</li>
+    </ul>
 
     <h2>Projects</h2>
     <ul>
