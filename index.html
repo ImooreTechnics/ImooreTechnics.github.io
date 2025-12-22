@@ -132,7 +132,7 @@
 
     <h2>About Me</h2>
     <p>
-      I’m a Clinical Data Science enthusiast pursuing a B.A. in Computer Science with minors in Mathematics and Data Science.
+      I’m a Clinical Data Science enthusiast pursuing a B.A. in Computer Science.
       My passion lies in applying ML and predictive modeling to healthcare challenges.
     </p>
 
@@ -154,82 +154,12 @@
     </ul>
 
     <h2>Projects</h2>
+    <p>
+      <a href="projects.html">View my projects →</a>
+    </p>
 
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-title">
-        <strong>Clinical Named Entity Recognition &amp; Diagnosis Similarity Analysis</strong>
-      </div>
 
-      <div class="project-meta">
-        <strong>CISC 488: Introduction to NLP</strong> · Python · BERT · CRF · HuggingFace · Word2Vec · scikit-learn · k-means · cosine similarity
-      </div>
-
-      <p class="project-summary">
-        <em>Clinical NLP + similarity modeling to simulate case-based diagnostic support from unstructured notes.</em>
-      </p>
-
-      <ul class="project-bullets">
-        <li>Built a clinical NLP pipeline to extract medical entities and identify diagnostically similar patient cases from unstructured clinical text.</li>
-        <li>Implemented and compared CRF-based vs. BERT-based NER models using precision/recall/F1 across disease, symptom, drug, and test entities.</li>
-        <li>Created a synthetic BIO-tagged clinical dataset (75 snippets, 1,000+ tokens) to simulate real-world EHR access constraints.</li>
-        <li>Generated embeddings with Word2Vec and BERT; applied cosine similarity + k-means clustering to group related clinical cases.</li>
-        <li>Added interpretability visuals (e.g., t-SNE/UMAP, heatmaps) to understand model output and cluster structure.</li>
-      </ul>
-
-      <div class="project-links">
-        <a
-          href="https://colab.research.google.com/github/imoore2025/CISC488-Final-Project/blob/main/Clinical%20NER.ipynb"
-          target="_blank"
-          rel="noopener noreferrer"
-        >View Notebook</a>
-
-        <!-- Optional: add when you have it -->
-        <!-- <a href="assets/Clinical_NER_Project_Report.pdf" target="_blank" rel="noopener noreferrer">Project Report (PDF)</a> -->
-        <!-- <a href="https://github.com/imoore2025/CISC488-Final-Project" target="_blank" rel="noopener noreferrer">GitHub Repo</a> -->
-      </div>
-    </div>
-
-    <!-- Project 2 -->
-    <div class="project-card">
-      <div class="project-title">
-        <strong>Clinical Decision Support via Integrated Patient Behavior &amp; Risk Pattern Mining</strong>
-      </div>
-
-      <div class="project-meta">
-        <strong>CISC 483: Data Mining</strong> · Python · scikit-learn · mlxtend · NetworkX · Apriori · K-Means · PageRank · Collaborative Filtering · Decision Trees
-      </div>
-
-      <p class="project-summary">
-        <em>
-          Modular clinical decision support framework integrating multiple interpretable data mining techniques on synthetic EHR data.
-        </em>
-      </p>
-
-      <ul class="project-bullets">
-        <li>Built a multi-module clinical decision support pipeline using synthetic EHR data (Synthea) to model patient behavior, treatment patterns, and risk stratification.</li>
-        <li>Applied <strong>association rule mining (Apriori)</strong> to symptom–medication–outcome triplets, extracting interpretable rules and adapting support thresholds for dataset scale.</li>
-        <li>Engineered patient-level features (age, encounter count, medication count, systolic blood pressure) and performed <strong>K-Means clustering</strong> to identify patient subgroups.</li>
-        <li>Constructed a directed graph of patient care transitions and applied <strong>PageRank-based centrality</strong> to identify high-impact care states and transition pathways.</li>
-        <li>Implemented <strong>collaborative filtering (user–user and item–item)</strong> using cosine similarity to recommend medications based on peer patient histories.</li>
-        <li>Trained an interpretable <strong>decision tree classifier (entropy / ID3-style)</strong> to predict high-risk vs. low-risk patients, evaluating precision, recall, and accuracy.</li>
-        <li>Emphasized interpretability through visualizations (PCA cluster plots, rule confidence charts, PageRank graphs) and clinical narrative analysis.</li>
-      </ul>
-
-      <div class="project-links">
-        <a
-          href="https://colab.research.google.com/drive/1rYq3dBbgdVf5pLfi9sj8wrAP44PTkOv6"
-          target="_blank"
-          rel="noopener noreferrer"
-        >View Notebook</a>
-
-        <!-- Optional: add when you have it -->
-        <!-- <a href="assets/Clinical_Decision_Support_Report.pdf" target="_blank" rel="noopener noreferrer">Final Report (PDF)</a> -->
-        <!-- <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer">GitHub Repo</a> -->
-      </div>
-    </div>
-
-    <h2>Resume</h2>
+    <h2 id="resume">Resume</h2>
     <p>
       <a
         href="https://docs.google.com/document/d/1KeVP1f-mG5ZPVYXSDnAoPPrOd8trbecncVXKQ9IlHzc/edit?tab=t.0"
