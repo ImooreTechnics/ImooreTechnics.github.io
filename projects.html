@@ -1,253 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Isaiah Moore | Projects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isaiah Moore | Projects</title>
 
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@jupyterlab/theme-light-extension/style/index.css"
-  />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@jupyterlab/theme-light-extension/style/index.css" />
 
-  <style>
-    :root {
-      --primary-color: #1a73e8;
-      --background-color: #f9f9fc;
-      --text-color: #333;
-      --header-color: #2c3e50;
-      --card-border: #e6e6e6;
-    }
+    <style>
+        :root {
+            --primary-color: #1a73e8;
+            --background-color: #f9f9fc;
+            --text-color: #333;
+            --header-color: #2c3e50;
+            --card-border: #e6e6e6;
+        }
 
-    body {
-      font-family: Calibri, sans-serif;
-      margin: 2rem;
-      background-color: #f8f8f8;
-      color: var(--text-color);
-      line-height: 1.5;
-    }
+        body {
+            font-family: Calibri, sans-serif;
+            margin: 2rem;
+            background-color: #f8f8f8;
+            color: var(--text-color);
+            line-height: 1.5;
+        }
 
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-    }
+        .container {
+            max-width: 860px;
+            margin: 0 auto;
+        }
 
-    h1, h2 {
-      color: var(--header-color);
-      border-bottom: 2px solid #ddd;
-      padding-bottom: 0.3rem;
-      margin-top: 2rem;
-    }
+        h1,
+        h2 {
+            color: var(--header-color);
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.3rem;
+            margin-top: 2rem;
+        }
 
-    h1 { margin-top: 0; }
+        h1 {
+            margin-top: 0;
+        }
 
-    a {
-      color: var(--primary-color);
-      text-decoration: none;
-      font-weight: 500;
-    }
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-    a:hover { text-decoration: underline; }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    /* Nav */
-    .nav {
-      display: flex;
-      gap: 1rem;
-      margin: 1rem 0 1.5rem 0;
-      flex-wrap: wrap;
-    }
+        /* Nav */
+        .nav {
+            display: flex;
+            gap: 1rem;
+            margin: 1rem 0 1.5rem 0;
+            flex-wrap: wrap;
+        }
 
-    .nav a {
-      background: white;
-      border: 1px solid var(--card-border);
-      padding: 0.45rem 0.75rem;
-      border-radius: 999px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    .project-links {
-  margin-top: 0.75rem;
-}
+        .nav a {
+            background: white;
+            border: 1px solid var(--card-border);
+            padding: 0.45rem 0.75rem;
+            border-radius: 999px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
 
-    .project-links a {
-    margin-right: 0.75rem;
-    display: inline-block;
-    padding: 0.35rem 0.75rem;
-    border-radius: 999px;
-    background: #f1f5ff;
-    border: 1px solid #d6e2ff;
-    font-size: 0.9rem;
-    }
+        .project-links {
+            margin-top: 0.75rem;
+        }
 
-    .project-links a:hover {
-    background: #e6efff;
-    text-decoration: none;
-    }
+        .project-links a {
+            margin-right: 0.75rem;
+            display: inline-block;
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            background: #f1f5ff;
+            border: 1px solid #d6e2ff;
+            font-size: 0.9rem;
+        }
+
+        .project-links a:hover {
+            background: #e6efff;
+            text-decoration: none;
+        }
 
 
-    /* Project cards */
-    .project-card {
-      background: #fff;
-      border: 1px solid var(--card-border);
-      border-radius: 12px;
-      padding: 1rem 1.2rem;
-      margin: 1rem 0;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
+        /* Project cards */
+        .project-card {
+            background: #fff;
+            border: 1px solid var(--card-border);
+            border-radius: 12px;
+            padding: 1rem 1.2rem;
+            margin: 1rem 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
 
-    .project-title {
-      font-size: 1.08rem;
-      margin-bottom: 0.25rem;
-    }
+        .project-title {
+            font-size: 1.08rem;
+            margin-bottom: 0.25rem;
+        }
 
-    .project-meta {
-      font-size: 0.93rem;
-      color: #555;
-      margin-bottom: 0.75rem;
-    }
+        .project-meta {
+            font-size: 0.93rem;
+            color: #555;
+            margin-bottom: 0.75rem;
+        }
 
-    .project-summary { margin: 0 0 0.75rem 0; }
+        .project-summary {
+            margin: 0 0 0.75rem 0;
+        }
 
-    .project-bullets { margin: 0.75rem 0 0 1.2rem; }
+        .project-bullets {
+            margin: 0.75rem 0 0 1.2rem;
+        }
 
-    .project-links a {
-      margin-right: 1rem;
-      display: inline-block;
-      margin-top: 0.6rem;
-    }
+        .project-links a {
+            margin-right: 1rem;
+            display: inline-block;
+            margin-top: 0.6rem;
+        }
 
-    @media (max-width: 520px) {
-      body { margin: 1rem; }
-      .project-links a { margin-right: 0.75rem; }
-    }
-  </style>
+        @media (max-width: 520px) {
+            body {
+                margin: 1rem;
+            }
+
+            .project-links a {
+                margin-right: 0.75rem;
+            }
+        }
+    </style>
 </head>
 
 <body>
-  <div class="container">
-    <h1>Projects</h1>
+    <div class="container">
+        <h1>Projects</h1>
 
-    <div class="nav">
-      <a href="index.html">← Home</a>
-      <a href="index.html#resume">Resume</a>
-    </div>
-
-    <!-- Project 1 -->
-    <div class="project-card">
-      <div class="project-title">
-        <strong>Clinical Named Entity Recognition &amp; Diagnosis Similarity Analysis</strong>
-      </div>
-
-      <div class="project-meta">
-        <strong>CISC 488: Introduction to NLP (April 2025 - May 2025)</strong> · Python · BERT · CRF · HuggingFace · Word2Vec · scikit-learn · k-means · cosine similarity
-      </div>
-
-      <p class="project-summary">
-        <em>Clinical NLP + similarity modeling to simulate case-based diagnostic support from unstructured notes.</em>
-      </p>
-
-      <ul class="project-bullets">
-        <li>Built a clinical NLP pipeline to extract medical entities and identify diagnostically similar patient cases from unstructured clinical text.</li>
-        <li>Implemented and compared CRF-based vs. BERT-based NER models using precision/recall/F1 across disease, symptom, drug, and test entities.</li>
-        <li>Created a synthetic BIO-tagged clinical dataset (75 snippets, 1,000+ tokens) to simulate real-world EHR access constraints.</li>
-        <li>Generated embeddings with Word2Vec and BERT; applied cosine similarity + k-means clustering to group related clinical cases.</li>
-        <li>Added interpretability visuals (e.g., t-SNE/UMAP, heatmaps) to understand model output and cluster structure.</li>
-      </ul>
-
-      <div class="project-links">
-        <a
-            href="https://colab.research.google.com/drive/15DyYTFpSjWlNuRfTHnOgBxcLDF2lmq6u"
-            target="_blank"
-            rel="noopener noreferrer"
-        >View Google Colab Notebook</a>
-
-        <a
-            href="https://docs.google.com/document/d/19lS5yQnZERYHOGaj2guVNqfyaX323fv1rawRXnWoFFk/edit?tab=t.0#heading=h.90sta8pv1bb0"
-            target="_blank"
-            rel="noopener noreferrer"
-        >Project Report</a>
-
-        <a
-            href="https://docs.google.com/presentation/d/1ZvuGEox2iYZSLRLbuHkE7EA5S69MwV9oUWJP7mDp7EE/edit?slide=id.p#slide=id.p"
-            target="_blank"
-            rel="noopener noreferrer"
-        >Poster Outline</a>
+        <div class="nav">
+            <a href="index.html">← Home</a>
+            <a href="index.html#resume">Resume</a>
         </div>
 
-    </div>
+        <!-- Project 1 -->
+        <div class="project-card">
+            <div class="project-title">
+                <strong>Clinical Named Entity Recognition &amp; Diagnosis Similarity Analysis</strong>
+            </div>
 
-    <!-- Project 2 -->
+            <div class="project-meta">
+                <strong>CISC 488: Introduction to NLP (April 2025 - May 2025)</strong> · Python · BERT · CRF ·
+                HuggingFace · Word2Vec · scikit-learn · k-means · cosine similarity
+            </div>
+
+            <p class="project-summary">
+                <em>Clinical NLP + similarity modeling to simulate case-based diagnostic support from unstructured
+                    notes.</em>
+            </p>
+
+            <ul class="project-bullets">
+                <li>Built a clinical NLP pipeline to extract medical entities and identify diagnostically similar
+                    patient cases from unstructured clinical text.</li>
+                <li>Implemented and compared CRF-based vs. BERT-based NER models using precision/recall/F1 across
+                    disease, symptom, drug, and test entities.</li>
+                <li>Created a synthetic BIO-tagged clinical dataset (75 snippets, 1,000+ tokens) to simulate real-world
+                    EHR access constraints.</li>
+                <li>Generated embeddings with Word2Vec and BERT; applied cosine similarity + k-means clustering to group
+                    related clinical cases.</li>
+                <li>Added interpretability visuals (e.g., t-SNE/UMAP, heatmaps) to understand model output and cluster
+                    structure.</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="https://colab.research.google.com/drive/15DyYTFpSjWlNuRfTHnOgBxcLDF2lmq6u" target="_blank"
+                    rel="noopener noreferrer">View Google Colab Notebook</a>
+
+                <a href="https://docs.google.com/document/d/19lS5yQnZERYHOGaj2guVNqfyaX323fv1rawRXnWoFFk/edit?tab=t.0#heading=h.90sta8pv1bb0"
+                    target="_blank" rel="noopener noreferrer">Project Report</a>
+
+                <a href="https://docs.google.com/presentation/d/1ZvuGEox2iYZSLRLbuHkE7EA5S69MwV9oUWJP7mDp7EE/edit?slide=id.p#slide=id.p"
+                    target="_blank" rel="noopener noreferrer">Poster Outline</a>
+            </div>
+
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+            <div class="project-title">
+                <strong>Clinical Decision Support via Integrated Patient Behavior &amp; Risk Pattern Mining</strong>
+            </div>
+
+            <div class="project-meta">
+                <strong>CISC 483: Data Mining (May 2025 - June 2025) </strong> · Python · scikit-learn · mlxtend ·
+                NetworkX · Apriori · K-Means · PageRank · Collaborative Filtering · Decision Trees
+            </div>
+
+            <p class="project-summary">
+                <em>Modular clinical decision support framework integrating multiple interpretable data mining
+                    techniques on synthetic EHR data.</em>
+            </p>
+
+            <ul class="project-bullets">
+                <li>Built a multi-module clinical decision support pipeline using synthetic EHR data (Synthea) to model
+                    patient behavior, treatment patterns, and risk stratification.</li>
+                <li>Applied association rule mining (Apriori), clustering, graph centrality (PageRank), collaborative
+                    filtering, and decision trees to extract interpretable clinical insights.</li>
+                <li>Emphasized interpretability through visualizations (PCA cluster plots, rule confidence charts,
+                    PageRank graphs) and narrative analysis.</li>
+            </ul>
+
+            <div class="project-links">
+                <a href="https://colab.research.google.com/drive/1rYq3dBbgdVf5pLfi9sj8wrAP44PTkOv6" target="_blank"
+                    rel="noopener noreferrer">View Google Colab Notebook</a>
+
+                <a href="https://docs.google.com/document/d/1Ni3zFYktDJBSnZVfwdnDycwqItILOsIRmK9Iv0yFYuw/edit?tab=t.0"
+                    target="_blank" rel="noopener noreferrer">Project Proposal</a>
+
+                <a href="https://docs.google.com/document/d/1RVIptqI3tj6GUhkE2x9TnWSpF-l3LZnp5s3s0uKpxOA/edit?tab=t.0"
+                    target="_blank" rel="noopener noreferrer">Final Report</a>
+            </div>
+        </div>
+    </div>
+    <!-- Project 3 -->
     <div class="project-card">
-      <div class="project-title">
-        <strong>Clinical Decision Support via Integrated Patient Behavior &amp; Risk Pattern Mining</strong>
-      </div>
+        <div class="project-title">
+            <strong>Super Bowl Ads Clustering &amp; Athlete Network Analysis</strong>
+        </div>
 
-      <div class="project-meta">
-        <strong>CISC 483: Data Mining (May 2025 - June 2025) </strong> · Python · scikit-learn · mlxtend · NetworkX · Apriori · K-Means · PageRank · Collaborative Filtering · Decision Trees
-      </div>
+        <div class="project-meta">
+            <strong>MATH 219: Data Science I (January-February 2025)</strong> · Python · pandas · scikit-learn · K-Means
+            · Silhouette Score · NetworkX · Power-Law · Small-World Networks
+        </div>
 
-      <p class="project-summary">
-        <em>Modular clinical decision support framework integrating multiple interpretable data mining techniques on synthetic EHR data.</em>
-      </p>
+        <p class="project-summary">
+            <em>Unsupervised learning and network science analysis exploring advertising patterns and social structure
+                in sports-related data.</em>
+        </p>
 
-      <ul class="project-bullets">
-        <li>Built a multi-module clinical decision support pipeline using synthetic EHR data (Synthea) to model patient behavior, treatment patterns, and risk stratification.</li>
-        <li>Applied association rule mining (Apriori), clustering, graph centrality (PageRank), collaborative filtering, and decision trees to extract interpretable clinical insights.</li>
-        <li>Emphasized interpretability through visualizations (PCA cluster plots, rule confidence charts, PageRank graphs) and narrative analysis.</li>
-      </ul>
+        <ul class="project-bullets">
+            <li>Applied K-Means clustering to Super Bowl advertisement features and selected the optimal number of
+                clusters using silhouette scores.</li>
+            <li>Identified representative ads by computing distance to cluster centroids for interpretability.</li>
+            <li>Constructed and analyzed an athlete Facebook network using graph-theoretic metrics.</li>
+            <li>Evaluated whether the network exhibits small-world properties and a power-law degree distribution.</li>
+            <li>Combined statistical reasoning, visualization, and narrative interpretation in a reproducible Colab
+                workflow.</li>
+        </ul>
 
-     <div class="project-links">
-  <a
-    href="https://colab.research.google.com/drive/1rYq3dBbgdVf5pLfi9sj8wrAP44PTkOv6"
-    target="_blank"
-    rel="noopener noreferrer"
-  >View Google Colab Notebook</a>
-
-  <a
-    href="https://docs.google.com/document/d/1Ni3zFYktDJBSnZVfwdnDycwqItILOsIRmK9Iv0yFYuw/edit?tab=t.0"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Project Proposal</a>
-
-  <a
-    href="https://docs.google.com/document/d/1RVIptqI3tj6GUhkE2x9TnWSpF-l3LZnp5s3s0uKpxOA/edit?tab=t.0"
-    target="_blank"
-    rel="noopener noreferrer"
-  >Final Report</a>
-</div>
+        <div class="project-links">
+            <a href="https://colab.research.google.com/drive/1T5EkZ9zasYGkB-2B__oGdp4_lw727Zg-" target="_blank"
+                rel="noopener noreferrer">
+                View Google Colab Notebook
+            </a>
+        </div>
     </div>
-  </div>
-  <!-- Project 3 -->
-<div class="project-card">
-  <div class="project-title">
-    <strong>Super Bowl Ads Clustering &amp; Athlete Network Analysis</strong>
-  </div>
-
-  <div class="project-meta">
-    <strong>MATH 219: Data Science I (January-February 2025)</strong> · Python · pandas · scikit-learn · K-Means · Silhouette Score · NetworkX · Power-Law · Small-World Networks
-  </div>
-
-  <p class="project-summary">
-    <em>Unsupervised learning and network science analysis exploring advertising patterns and social structure in sports-related data.</em>
-  </p>
-
-  <ul class="project-bullets">
-    <li>Applied K-Means clustering to Super Bowl advertisement features and selected the optimal number of clusters using silhouette scores.</li>
-    <li>Identified representative ads by computing distance to cluster centroids for interpretability.</li>
-    <li>Constructed and analyzed an athlete Facebook network using graph-theoretic metrics.</li>
-    <li>Evaluated whether the network exhibits small-world properties and a power-law degree distribution.</li>
-    <li>Combined statistical reasoning, visualization, and narrative interpretation in a reproducible Colab workflow.</li>
-  </ul>
-
-  <div class="project-links">
-    <a
-      href="https://colab.research.google.com/drive/1T5EkZ9zasYGkB-2B__oGdp4_lw727Zg-"
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      View Google Colab Notebook
-    </a>
-  </div>
-</div>
 
 </body>
+
 </html>
